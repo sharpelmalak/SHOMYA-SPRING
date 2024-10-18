@@ -1,4 +1,4 @@
-package iti.jets.shomya;
+package iti.jets;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

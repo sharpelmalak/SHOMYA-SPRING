@@ -1,4 +1,4 @@
-package iti.jets.shomya;
+package iti.jets;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
