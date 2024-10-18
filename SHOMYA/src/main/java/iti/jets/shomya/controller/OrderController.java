@@ -31,6 +31,7 @@ public class OrderController {
 
 @GetMapping("/{orderID}")
 public Order getOrderById(@PathVariable("orderID") int orderID) {
+
     return orderService.getOrder(orderID);
 }
 
@@ -38,6 +39,12 @@ public Order getOrderById(@PathVariable("orderID") int orderID) {
 @DeleteMapping("/{orderID}")
     public String deleteOrder(@PathVariable("orderID") int orderID) {
     orderService.deleteOrder(orderID);
+    return "success";
+}
+
+@PutMapping("/{orderID}")
+    public String updateOrder(@PathVariable("orderID") int orderID, @RequestBody Order order) {
+    orderService.updateOrder(order);
     return "success";
 }
 

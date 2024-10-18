@@ -10,5 +10,6 @@ public interface OrderService {
     void saveOrder(Order order);
     void deleteOrder(int id);
     ArrayList<Order> getOrdersByCustomer(int customerId);
+    Order updateOrder(Order order);
 
 }

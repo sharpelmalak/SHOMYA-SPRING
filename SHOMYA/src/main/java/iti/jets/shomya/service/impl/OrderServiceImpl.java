@@ -38,4 +38,9 @@ public class OrderServiceImpl implements OrderService {
         return (ArrayList<Order>) orderRepo.allByCustomerId(customerId);
     }
 
+    @Override
+    public Order updateOrder(Order order) {
+        return orderRepo.save(order); // This will update the order if it exists
+    }
+
 }
