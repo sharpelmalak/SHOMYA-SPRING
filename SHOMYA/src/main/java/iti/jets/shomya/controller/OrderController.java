@@ -13,7 +13,7 @@ public class OrderController {
 @Autowired
     OrderServiceImpl orderService;
 
-@PostMapping("/add")
+@PostMapping("/addOrder")
     public String addOrder(@RequestBody Order order) {
     orderService.saveOrder(order);
     return "success";
@@ -35,7 +35,7 @@ public Order getOrderById(@PathVariable("orderID") int orderID) {
 }
 
 
-@DeleteMapping("/delete/{orderID}")
+@DeleteMapping("/{orderID}")
     public String deleteOrder(@PathVariable("orderID") int orderID) {
     orderService.deleteOrder(orderID);
     return "success";
