@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@RestController("/orders")
 public class OrderController {
 
 @Autowired
     OrderServiceImpl orderService;
-
 
 @PostMapping("/add")
     public String addOrder(@RequestBody Order order) {
@@ -25,9 +24,14 @@ public class OrderController {
     return orderService.getOrders();
 }
 
-@GetMapping("/orders/{customerID}")
+@GetMapping("/{customerID}")
     public List<Order> getOrdersByCustomerID(@PathVariable("customerID") int customerID) {
     return orderService.getOrdersByCustomer(customerID);
+}
+
+@GetMapping("/{orderID}")
+public Order getOrderById(@PathVariable("orderID") int orderID) {
+    return orderService.getOrder(orderID);
 }
 
 

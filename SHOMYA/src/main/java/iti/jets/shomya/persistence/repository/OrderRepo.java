@@ -14,7 +14,7 @@ public interface OrderRepo extends JpaRepository<Order, Integer> {
 
     @Query("SELECT o FROM Order o WHERE o.customer.id = :customerId")
     List<Order> allByCustomerId(@Param("customerId") int customerId);
-    List<Order> findAllByCustomerId(int customerId);
+    //List<Order> findAllByCustomerId(int customerId);
     long countByCustomerId(int customerId);
     @Override
     List<Order> findAll();
