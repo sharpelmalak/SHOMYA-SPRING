@@ -1,7 +1,7 @@
-package iti.jets.service;
+package iti.jets.shomya.service;
 
-import iti.jets.persistence.model.Customer;
-import iti.jets.persistence.repositery.CustomerRepo;
+import iti.jets.shomya.persistence.model.Customer;
+import iti.jets.shomya.persistence.repositery.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,5 +39,5 @@ public class CustomerService {
         customerRepo.deleteById(id);
     }
 
-    
+
 }

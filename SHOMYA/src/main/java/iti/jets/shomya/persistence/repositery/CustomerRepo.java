@@ -1,6 +1,6 @@
-package iti.jets.persistence.repositery;
+package iti.jets.shomya.persistence.repositery;
 
-import iti.jets.persistence.model.Customer;
+import iti.jets.shomya.persistence.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepo extends JpaRepository<Customer, Integer> {

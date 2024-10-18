@@ -1,4 +1,4 @@
-package iti.jets.persistence.model;
+package iti.jets.shomya.persistence.model;
 // Generated Sep 2, 2024, 5:22:05 PM by Hibernate Tools 6.5.1.Final
 
 
