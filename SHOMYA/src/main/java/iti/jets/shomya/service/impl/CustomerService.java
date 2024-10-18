@@ -1,7 +1,7 @@
-package iti.jets.shomya.service;
+package iti.jets.shomya.service.impl;
 
 import iti.jets.shomya.persistence.model.Customer;
-import iti.jets.shomya.persistence.repositery.CustomerRepo;
+import iti.jets.shomya.persistence.repository.CustomerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

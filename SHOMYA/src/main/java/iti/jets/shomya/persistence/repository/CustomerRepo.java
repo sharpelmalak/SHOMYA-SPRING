@@ -1,4 +1,4 @@
-package iti.jets.shomya.persistence.repositery;
+package iti.jets.shomya.persistence.repository;
 
 import iti.jets.shomya.persistence.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
