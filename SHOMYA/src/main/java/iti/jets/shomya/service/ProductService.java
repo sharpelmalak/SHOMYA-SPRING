@@ -14,7 +14,11 @@ public class ProductService {
    @Autowired
     private ProductsRepo productsRepo;
 
-   public List<Product> getAllProducts()
+    public ProductService(ProductsRepo productsRepo) {
+        this.productsRepo = productsRepo;
+    }
+
+    public List<Product> getAllProducts()
    {
        return productsRepo.findAll();
    }
@@ -22,6 +26,10 @@ public class ProductService {
     {
         Optional<Product> product = productsRepo.findById(id);
         return product.orElseThrow(()->new RuntimeException("there is no product with this ID = "+id));
+    }
+    public Product CreateProduct(Product product)
+    {
+        return productsRepo.save(product);
     }
 
 

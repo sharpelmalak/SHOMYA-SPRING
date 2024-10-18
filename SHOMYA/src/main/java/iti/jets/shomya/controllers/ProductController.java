@@ -3,10 +3,8 @@ package iti.jets.shomya.controllers;
 import iti.jets.shomya.persistence.model.Product;
 import iti.jets.shomya.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,9 +20,17 @@ public List<Product> getAllproducts()
 }
 
   @GetMapping("/{id}")
-  public Product getproducts(@RequestParam int id)
+  public ResponseEntity<Product> getproducts(@PathVariable int id)
   {
-    return productService.getProduct(id);
+    Product p=  productService.getProduct(id);
+    if(p !=null)
+      return ResponseEntity.ok(p);
+    return ResponseEntity.notFound().build();
   }
+
+ @PostMapping
+  public ResponseEntity<Product>saveProducts(@RequestBody Product product){
+  return ResponseEntity.ok(productService.CreateProduct(product));
+ }
 
 }
