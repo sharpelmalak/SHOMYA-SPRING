@@ -2,6 +2,7 @@ package iti.jets.shomya.persistence.model;
 // Generated Sep 2, 2024, 5:22:05 PM by Hibernate Tools 6.5.1.Final
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -64,6 +65,7 @@ public class Product  implements java.io.Serializable {
 
 @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="admin_id", nullable=false)
+@JsonIgnore
     public Admin getAdmin() {
         return this.admin;
     }
